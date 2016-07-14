@@ -10,4 +10,9 @@ import java.util.List;
 public class CustomApplication extends Application {
     public static int mAppStatus = -1;
     public static List<String> mTestNullPointers;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
 }
