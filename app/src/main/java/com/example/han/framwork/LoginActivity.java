@@ -16,7 +16,7 @@ public class LoginActivity extends BaseActivity {
 
 	@Override
 	protected void setupData() {
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.activity_login, R.string.title_activity_login);
 		findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

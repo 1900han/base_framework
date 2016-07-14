@@ -5,20 +5,21 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
+import com.example.han.framwork.constant.ConstantValues;
+import com.example.han.framwork.core.AppStatusTracker;
 import com.example.han.framwork.core.BaseActivity;
-import com.example.han.framwork.core.CustomApplication;
 
 public class WelcomeActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		CustomApplication.mAppStatus = 0;
+		AppStatusTracker.getInstance().setAppStatus(ConstantValues.STATUS_OFFLINE);
 		super.onCreate(savedInstanceState);
 	}
 
 	@Override
 	protected void setupData() {
-		setContentView(R.layout.activity_welcome);
+		setContentView(R.layout.activity_welcome, -1, MODE_NONE);
 		mHandler.sendEmptyMessageDelayed(0, 1000);
 	}
 
